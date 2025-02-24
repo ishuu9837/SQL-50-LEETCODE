@@ -1,4 +1,15 @@
 # SQL 50 - LeetCode
+
+This repository contains my solutions to the SQL 50 Study Plan on LeetCode. These problems cover a range of SQL concepts including joins, subqueries, window functions, aggregations, and more. Each solution is written in SQL and tested to work on LeetCode's platform.
+
+## How to Use
+
+---Each problem is listed with its LeetCode problem number and title.
+---Solutions are provided in SQL code blocks that you can copy and paste directly into LeetCode or your SQL environment.
+---Some problems include alternative solutions (commented with -- OR) for different approaches.
+---Comments within the code explain key logic where applicable.
+
+
 Solutions for [SQL 50 Study Plan](https://leetcode.com/studyplan/top-sql-50/) on LeetCode
 
 ---
