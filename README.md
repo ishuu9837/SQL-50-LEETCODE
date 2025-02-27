@@ -518,19 +518,16 @@ WHERE mail REGEXP '^[A-Za-z][A-Za-z0-9_\.\-]*@leetcode\\.com$'
 
 [1204. Last Person to Fit in the Bus](https://leetcode.com/problems/last-person-to-fit-in-the-bus/)
 ```sql
--- 1000 kg limit
--- name of last person
-
 WITH CTE AS (
-    SELECT person_name, weight, turn, SUM(weight) 
-    OVER(ORDER BY turn) AS total_weight
+    SELECT person_name, weight, turn, 
+           SUM(weight) OVER(ORDER BY turn) AS total_weight
     FROM Queue
 )
-SELECT person_name
-FROM cte
-WHERE total_weight <=1000
-ORDER BY total_weight DESC
-LIMIT 1;
+SELECT TOP 1 person_name
+FROM CTE
+WHERE total_weight <= 1000
+ORDER BY total_weight DESC;
+
 ```
 
 [1907. Count Salary Categories](https://leetcode.com/problems/count-salary-categories/)
